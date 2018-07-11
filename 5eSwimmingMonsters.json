@@ -1,0 +1,518 @@
+{
+	"items": [
+		{
+			"h": "chwinga_toa",
+			"c": "1"
+		},
+		{
+			"h": "crab_mm",
+			"c": "1"
+		},
+		{
+			"h": "frog_mm",
+			"c": "1"
+		},
+		{
+			"h": "octopus_mm",
+			"c": "1"
+		},
+		{
+			"h": "quipper_mm",
+			"c": "1"
+		},
+		{
+			"h": "sea%20horse_mm",
+			"c": "1"
+		},
+		{
+			"h": "dolphin_vgm",
+			"c": "1"
+		},
+		{
+			"h": "flying%20snake_mm",
+			"c": "1"
+		},
+		{
+			"h": "giant%20crab_mm",
+			"c": "1"
+		},
+		{
+			"h": "merfolk_mm",
+			"c": "1"
+		},
+		{
+			"h": "poisonous%20snake_mm",
+			"c": "1"
+		},
+		{
+			"h": "bullywug_mm",
+			"c": "1"
+		},
+		{
+			"h": "constrictor%20snake_mm",
+			"c": "1"
+		},
+		{
+			"h": "dimetrodon_vgm",
+			"c": "1"
+		},
+		{
+			"h": "giant%20frog_mm",
+			"c": "1"
+		},
+		{
+			"h": "giant%20poisonous%20snake_mm",
+			"c": "1"
+		},
+		{
+			"h": "ixitxachitl_oota",
+			"c": "1"
+		},
+		{
+			"h": "ixitxachitl%20cleric_oota",
+			"c": "1"
+		},
+		{
+			"h": "kuo-toa_mm",
+			"c": "1"
+		},
+		{
+			"h": "mud%20mephit_mm",
+			"c": "1"
+		},
+		{
+			"h": "crocodile_mm",
+			"c": "1"
+		},
+		{
+			"h": "giant%20sea%20horse_mm",
+			"c": "1"
+		},
+		{
+			"h": "lizardfolk_mm",
+			"c": "1"
+		},
+		{
+			"h": "reef%20shark_mm",
+			"c": "1"
+		},
+		{
+			"h": "sahuagin_mm",
+			"c": "1"
+		},
+		{
+			"h": "aldani%20(lobsterfolk)_toa",
+			"c": "1"
+		},
+		{
+			"h": "giant%20octopus_mm",
+			"c": "1"
+		},
+		{
+			"h": "giant%20toad_mm",
+			"c": "1"
+		},
+		{
+			"h": "ice%20toad_rot",
+			"c": "1"
+		},
+		{
+			"h": "kuo-toa%20whip_mm",
+			"c": "1"
+		},
+		{
+			"h": "sea%20spawn_vgm",
+			"c": "1"
+		},
+		{
+			"h": "swarm%20of%20quippers_mm",
+			"c": "1"
+		},
+		{
+			"h": "black%20dragon%20wyrmling_mm",
+			"c": "1"
+		},
+		{
+			"h": "black%20guard%20drake_vgm",
+			"c": "1"
+		},
+		{
+			"h": "bronze%20dragon%20wyrmling_mm",
+			"c": "1"
+		},
+		{
+			"h": "calcryx_tftyp",
+			"c": "1"
+		},
+		{
+			"h": "cave%20bear_mm",
+			"c": "1"
+		},
+		{
+			"h": "giant%20constrictor%20snake_mm",
+			"c": "1"
+		},
+		{
+			"h": "giant%20crayfish_tftyp",
+			"c": "1"
+		},
+		{
+			"h": "gibbering%20mouther_mm",
+			"c": "1"
+		},
+		{
+			"h": "green%20dragon%20wyrmling_mm",
+			"c": "1"
+		},
+		{
+			"h": "green%20guard%20drake_vgm",
+			"c": "1"
+		},
+		{
+			"h": "hunter%20shark_mm",
+			"c": "1"
+		},
+		{
+			"h": "lizardfolk%20shaman_mm",
+			"c": "1"
+		},
+		{
+			"h": "merrow_mm",
+			"c": "1"
+		},
+		{
+			"h": "nereid_tftyp",
+			"c": "1"
+		},
+		{
+			"h": "plesiosaurus_mm",
+			"c": "1"
+		},
+		{
+			"h": "polar%20bear_mm",
+			"c": "1"
+		},
+		{
+			"h": "sahuagin%20priestess_mm",
+			"c": "1"
+		},
+		{
+			"h": "sea%20hag_mm",
+			"c": "1"
+		},
+		{
+			"h": "swarm%20of%20poisonous%20snakes_mm",
+			"c": "1"
+		},
+		{
+			"h": "vampiric%20ixitxachitl_oota",
+			"c": "1"
+		},
+		{
+			"h": "vampiric%20ixitxachitl%20cleric_oota",
+			"c": "1"
+		},
+		{
+			"h": "white%20dragon%20wyrmling_mm",
+			"c": "1"
+		},
+		{
+			"h": "giant%20lightning%20eel_tftyp",
+			"c": "1"
+		},
+		{
+			"h": "giant%20snapping%20turtle_toa",
+			"c": "1"
+		},
+		{
+			"h": "gold%20dragon%20wyrmling_mm",
+			"c": "1"
+		},
+		{
+			"h": "kalka-kylla_tftyp",
+			"c": "1"
+		},
+		{
+			"h": "killer%20whale_mm",
+			"c": "1"
+		},
+		{
+			"h": "kuo-toa%20monitor_mm",
+			"c": "1"
+		},
+		{
+			"h": "merrenoloth_mtf",
+			"c": "1"
+		},
+		{
+			"h": "pharblex%20spattergoo_hotdq",
+			"c": "1"
+		},
+		{
+			"h": "siren_tftyp",
+			"c": "1"
+		},
+		{
+			"h": "slithering%20tracker_vgm",
+			"c": "1"
+		},
+		{
+			"h": "water%20weird_mm",
+			"c": "1"
+		},
+		{
+			"h": "chuul_mm",
+			"c": "1"
+		},
+		{
+			"h": "chuul%20spore%20servant_oota",
+			"c": "1"
+		},
+		{
+			"h": "giant%20subterranean%20lizard_tftyp",
+			"c": "1"
+		},
+		{
+			"h": "kelpie_tftyp",
+			"c": "1"
+		},
+		{
+			"h": "lizard%20king_mm",
+			"c": "1"
+		},
+		{
+			"h": "lizard%20queen_mm",
+			"c": "1"
+		},
+		{
+			"h": "shoalar%20quanderil_pota",
+			"c": "1"
+		},
+		{
+			"h": "tecuziztecatl_tftyp",
+			"c": "1"
+		},
+		{
+			"h": "giant%20crocodile_mm",
+			"c": "1"
+		},
+		{
+			"h": "giant%20shark_mm",
+			"c": "1"
+		},
+		{
+			"h": "hulking%20crab_skt",
+			"c": "1"
+		},
+		{
+			"h": "kraken%20priest_vgm",
+			"c": "1"
+		},
+		{
+			"h": "sahuagin%20baron_mm",
+			"c": "1"
+		},
+		{
+			"h": "sea%20lion_tftyp",
+			"c": "1"
+		},
+		{
+			"h": "shambling%20mound_mm",
+			"c": "1"
+		},
+		{
+			"h": "water%20elemental_mm",
+			"c": "1"
+		},
+		{
+			"h": "kuo-toa%20archpriest_mm",
+			"c": "1"
+		},
+		{
+			"h": "young%20white%20dragon_mm",
+			"c": "1"
+		},
+		{
+			"h": "ghald_pota",
+			"c": "1"
+		},
+		{
+			"h": "water%20elemental%20myrmidon_pota",
+			"c": "1"
+		},
+		{
+			"h": "water%20elemental%20myrmidon_mtf",
+			"c": "1"
+		},
+		{
+			"h": "young%20black%20dragon_mm",
+			"c": "1"
+		},
+		{
+			"h": "huge%20giant%20crab_tftyp",
+			"c": "1"
+		},
+		{
+			"h": "hydra_mm",
+			"c": "1"
+		},
+		{
+			"h": "young%20bronze%20dragon_mm",
+			"c": "1"
+		},
+		{
+			"h": "young%20green%20dragon_mm",
+			"c": "1"
+		},
+		{
+			"h": "gar%20shatterkeel_pota",
+			"c": "1"
+		},
+		{
+			"h": "hydroloth_mtf",
+			"c": "1"
+		},
+		{
+			"h": "aboleth_mm",
+			"c": "1"
+		},
+		{
+			"h": "froghemoth_vgm",
+			"c": "1"
+		},
+		{
+			"h": "malformed%20kraken_tftyp",
+			"c": "1"
+		},
+		{
+			"h": "young%20gold%20dragon_mm",
+			"c": "1"
+		},
+		{
+			"h": "marid_mm",
+			"c": "1"
+		},
+		{
+			"h": "morkoth_vgm",
+			"c": "1"
+		},
+		{
+			"h": "yuan-ti%20anathema_vgm",
+			"c": "1"
+		},
+		{
+			"h": "adult%20white%20dragon_mm",
+			"c": "1"
+		},
+		{
+			"h": "king%20hekaton_skt",
+			"c": "1"
+		},
+		{
+			"h": "kraken_psz",
+			"c": "1"
+		},
+		{
+			"h": "storm%20giant_mm",
+			"c": "1"
+		},
+		{
+			"h": "wastrilith_mtf",
+			"c": "1"
+		},
+		{
+			"h": "adult%20black%20dragon_mm",
+			"c": "1"
+		},
+		{
+			"h": "elder%20brain_vgm",
+			"c": "1"
+		},
+		{
+			"h": "adult%20bronze%20dragon_mm",
+			"c": "1"
+		},
+		{
+			"h": "adult%20green%20dragon_mm",
+			"c": "1"
+		},
+		{
+			"h": "storm%20giant%20quintessent_vgm",
+			"c": "1"
+		},
+		{
+			"h": "adult%20gold%20dragon_mm",
+			"c": "1"
+		},
+		{
+			"h": "dragon%20turtle_mm",
+			"c": "1"
+		},
+		{
+			"h": "olhydra_pota",
+			"c": "1"
+		},
+		{
+			"h": "ancient%20white%20dragon_mm",
+			"c": "1"
+		},
+		{
+			"h": "leviathan_mtf",
+			"c": "1"
+		},
+		{
+			"h": "ancient%20black%20dragon_mm",
+			"c": "1"
+		},
+		{
+			"h": "ancient%20bronze%20dragon_mm",
+			"c": "1"
+		},
+		{
+			"h": "ancient%20green%20dragon_mm",
+			"c": "1"
+		},
+		{
+			"h": "zaratan_mtf",
+			"c": "1"
+		},
+		{
+			"h": "empyrean_mm",
+			"c": "1"
+		},
+		{
+			"h": "kraken_mm",
+			"c": "1"
+		},
+		{
+			"h": "ancient%20gold%20dragon_mm",
+			"c": "1"
+		},
+		{
+			"h": "slarkrethel_skt",
+			"c": "1"
+		},
+		{
+			"h": "demogorgon_mtf",
+			"c": "1"
+		},
+		{
+			"h": "elder%20dinosaur%20(nezahal%2c%20primal%20tide)_psx",
+			"c": "1"
+		}
+	],
+	"sources": [
+		"ToA",
+		"MM",
+		"VGM",
+		"OotA",
+		"RoT",
+		"TftYP",
+		"MTF",
+		"HotDQ",
+		"PotA",
+		"SKT",
+		"PSZ",
+		"PSX"
+	]
+}

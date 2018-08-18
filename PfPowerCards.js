@@ -2,8 +2,10 @@ var PowerCards = PowerCards || (function() {
 	//'use strict';
 	// VERSION INFO
 	var PowerCards_Author = "Sky and Kurt Jaegers";
+	var Bastard_Who_Tinkers_With_Aesthetics = "Cardboardicus";
 	var PowerCards_Version = "3.8.5";
 	var PowerCards_LastUpdated = "2018-08-10";
+	var PowerCards_LastTinkered = "2018-08-18";
 
 	// FUNCTION DECLARATIONS
 	var PowerCard = PowerCard || {};
@@ -13,7 +15,7 @@ var PowerCards = PowerCards || (function() {
 	var INLINE_ROLL_CRIT_LOW = " background-color: #823434; border-color: #660000; color: #ffe290;"; // !!! default " background-color: #FFAAAA; border-color: #660000; color: #660000;"
 	var INLINE_ROLL_CRIT_HIGH = " background-color: #88CC88; border-color: #004400; color: #004400;"; // !!! default " background-color: #88CC88; border-color: #004400; color: #004400;"
 	var INLINE_ROLL_CRIT_BOTH = " background-color: #8FA4D4; border-color: #061539; color: #061539;"; // !!! default " background-color: #8FA4D4; border-color: #061539; color: #061539;"
-	var INLINE_ROLL_STYLE = "text-align: center; font-size: 100%; display: inline-block; font-weight: bold; height: 1.2em; min-width: 1.75em; margin-top: -1px; margin-bottom: 1px; padding: 0px 2px; border: 1px solid; border-radius: 3px;";
+	var INLINE_ROLL_STYLE = "text-align: center; font-size: 100%; display: inline-block; font-weight: bold; height: 1.15em; min-width: 1.75em; margin-top: -1px; margin-bottom: 1px; padding: 0px 2px; border: 1px solid; border-radius: 3px;";
 
 	// API COMMAND HANDLER
 	on("chat:message", function(msg) {

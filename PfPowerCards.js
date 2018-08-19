@@ -6,6 +6,7 @@ var PowerCards = PowerCards || (function() {
 	var PowerCards_Version = "3.8.5";
 	var PowerCards_LastUpdated = "2018-08-10";
 	var PowerCards_LastTinkered = "2018-08-18";
+	var GoFindTheScripts_Here = "https://github.com/Roll20/roll20-api-scripts/tree/master/PowerCards";
 
 	// FUNCTION DECLARATIONS
 	var PowerCard = PowerCard || {};
@@ -96,10 +97,20 @@ var PowerCards = PowerCards || (function() {
 		var TargetCharacter_ID = ""
 
 		// DEFAULT FORMATTING
+		// These are my personal variable replacements.
+		//var Display = "";
+   		//var PlayerBGColor = "#662222";
+  		//var PlayerTXColor = "#ffe290";
+ 		//var PlayerTXShadow = "#000000";
    		var Display = "";
-   		var PlayerBGColor = "#662222"; // !!! default = (player_obj) ? player_obj.get("color") : "#FFFFFF";
-  		var PlayerTXColor = "#ffe290"; // !!! default = (getBrightness(PlayerBGColor) < (255 / 2)) ? "#FFFFFF" : "#000000";
- 		var PlayerTXShadow = "#000000"; // !!! default = (getBrightness(PlayerBGColor) < (255 / 2)) ? "#000000" : "#FFFFFF";
+		var PlayerBGColor = (player_obj) ? player_obj.get("color") : "#FFFFFF";
+		var PlayerTXColor = (getBrightness(PlayerBGColor) < (255 / 2)) ? "#FFFFFF" : "#000000";
+		var PlayerTXShadow = (getBrightness(PlayerBGColor) < (255 / 2)) ? "#000000" : "#FFFFFF";
+		// These are the original variables. I'm using this as a reference to tinker with.
+		//var Display = "";
+		//var PlayerBGColor = (player_obj) ? player_obj.get("color") : "#FFFFFF";
+		//var PlayerTXColor = (getBrightness(PlayerBGColor) < (255 / 2)) ? "#FFFFFF" : "#000000";
+		//var PlayerTXShadow = (getBrightness(PlayerBGColor) < (255 / 2)) ? "#000000" : "#FFFFFF";
     		PowerCard.titlefont = "Helvetica";
     		PowerCard.titlefontvariant = "small-caps";
     		PowerCard.titlefontshadow = "-1px -1px 0 " + PlayerTXShadow + ", 1px -1px 0 " + PlayerTXShadow + ", -1px 1px 0 " + PlayerTXShadow + ", 1px 1px 0 " + PlayerTXShadow + ";";
@@ -120,7 +131,8 @@ var PowerCards = PowerCards || (function() {
     		PowerCard.border = "3px double #660000"; // size style #color !!! default "1px single #000000"
     		PowerCard.boxshadow = ""; // h-distance v-distance blur spread #color
     		PowerCard.lineheight = "1.15em";
-		PowerCard.emotefont = "font-family: Georgia, serif; font-weight: bold; ";
+		// I'm going to try to get the font in the emote utilize the color from PlayerBGColor to match my personal formatting wants.
+		PowerCard.emotefont = "font-family: "Helvetica"; font-weight: bold; font-style: italic; font-size: inherit; color: var(--PlayerBGColor);"
 
 		// CREATE POWERCARD OBJECT
 		n.shift();

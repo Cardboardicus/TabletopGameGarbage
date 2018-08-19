@@ -9,11 +9,11 @@ var PowerCards = PowerCards || (function() {
 	var PowerCard = PowerCard || {};
 
 	// INLINE ROLL COLORS
-	var INLINE_ROLL_DEFAULT = " background-color: #FFFEA2; border-color: #87850A; color: #000000;";
-	var INLINE_ROLL_CRIT_LOW = " background-color: #FFAAAA; border-color: #660000; color: #660000;";
-	var INLINE_ROLL_CRIT_HIGH = " background-color: #88CC88; border-color: #004400; color: #004400;";
-	var INLINE_ROLL_CRIT_BOTH = " background-color: #8FA4D4; border-color: #061539; color: #061539;";
-	var INLINE_ROLL_STYLE = "text-align: center; font-size: 100%; display: inline-block; font-weight: bold; height: 1em; min-width: 1.75em; margin-top: -1px; margin-bottom: 1px; padding: 0px 2px; border: 1px solid; border-radius: 3px;";
+	var INLINE_ROLL_DEFAULT = " background-color: #ffe290; border-color: #87850A; color: #000000;"; // !!! default " background-color: #FFFEA2; border-color: #87850A; color: #000000;"; 
+	var INLINE_ROLL_CRIT_LOW = " background-color: #823434; border-color: #660000; color: #ffe290;"; // !!! default " background-color: #FFAAAA; border-color: #660000; color: #660000;"
+	var INLINE_ROLL_CRIT_HIGH = " background-color: #88CC88; border-color: #004400; color: #004400;"; // !!! default " background-color: #88CC88; border-color: #004400; color: #004400;"
+	var INLINE_ROLL_CRIT_BOTH = " background-color: #8FA4D4; border-color: #061539; color: #061539;"; // !!! default " background-color: #8FA4D4; border-color: #061539; color: #061539;"
+	var INLINE_ROLL_STYLE = "text-align: center; font-size: 100%; display: inline-block; font-weight: bold; height: 1.15em; min-width: 1.75em; margin-top: -1px; margin-bottom: 1px; padding: 0px 2px; border: 1px solid; border-radius: 3px;";
 
 	// API COMMAND HANDLER
 	on("chat:message", function(msg) {
@@ -57,12 +57,12 @@ var PowerCards = PowerCards || (function() {
 	// POWERCARD
 	PowerCard.Process = function(msg, player_obj) {
 		// USER CONFIGURATION
-		var ALLOW_URLS = false; // Allows players to include full urls in powercards
-		var ALLOW_HIDDEN_URLS = false; // Allows players to hide urls as a link instead
+		var ALLOW_URLS = true; // Allows players to include full urls in powercards
+		var ALLOW_HIDDEN_URLS = true; // Allows players to hide urls as a link instead
 		var CUSTOM_EMOTES = true; // Set to true to use custom emotes instead of Roll20 emotes
 		var SHOW_AVATAR = true; // Set to false to hide character sheet avatar in custom emotes
 		var SHOW_TARGET_AVATAR = true; // Set to false to hide target's avatar in custom emotes
-		var USE_DEFAULT_FORMAT = false; // Set to true if you want powercards to default formatting
+		var USE_DEFAULT_FORMAT = true; // Set to true if you want powercards to default formatting
 		var USE_PLAYER_COLOR = false; // Set to true to override all color formatting
 		
 		// REPLACE INLINE ROLLS WITH EXPRESSIONS
@@ -95,29 +95,29 @@ var PowerCards = PowerCards || (function() {
 
 		// DEFAULT FORMATTING
 		var Display = "";
-		var PlayerBGColor = (player_obj) ? player_obj.get("color") : "#FFFFFF";
-		var PlayerTXColor = (getBrightness(PlayerBGColor) < (255 / 2)) ? "#FFFFFF" : "#000000";
-		var PlayerTXShadow = (getBrightness(PlayerBGColor) < (255 / 2)) ? "#000000" : "#FFFFFF";
-		PowerCard.titlefont = "Contrail One";
-		PowerCard.titlefontvariant = "normal";
+   		var PlayerBGColor = "#662222";
+  		var PlayerTXColor = "#ffe290";
+ 		var PlayerTXShadow = "#000000";
+		PowerCard.titlefont = "Helvetica";
+		PowerCard.titlefontvariant = "small-caps";
 		PowerCard.titlefontshadow = "-1px -1px 0 " + PlayerTXShadow + ", 1px -1px 0 " + PlayerTXShadow + ", -1px 1px 0 " + PlayerTXShadow + ", 1px 1px 0 " + PlayerTXShadow + ";";
-		PowerCard.titlebackground = "linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, 0));";
-		PowerCard.subtitlefont = "Tahoma";
-		PowerCard.subtitlefontvariant = "normal";
-		PowerCard.bodyfont = "Helvetica";
-		PowerCard.titlefontsize = "1.2em; line-height: 1.2em";
-		PowerCard.subtitlefontsize = "11px";
-		PowerCard.bodyfontsize = "14px";
-		PowerCard.txcolor = PlayerTXColor;
+    		PowerCard.titlebackground = "linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, 0));"; // !!! changed rgba(255, 255, 255, .3) to rgba(255, 255, 255, .1)
+		PowerCard.subtitlefont = "Helvetica";
+		PowerCard.subtitlefontvariant = "small-caps"; // !!! default "normal"
+  	  	PowerCard.bodyfont = "Helvetica";
+   		PowerCard.titlefontsize = "1.4em; line-height: 1.2em"; // !!! default "1.2em; line-height: 1.2em"
+		PowerCard.subtitlefontsize = "12px"; // !!! default 11px
+		PowerCard.bodyfontsize = "14px"; //  default 14px
+    		PowerCard.txcolor = PlayerTXColor;
 		PowerCard.bgcolor = PlayerBGColor;
 		PowerCard.erowtx = "#000000";
-		PowerCard.erowbg = "#B6AB91"; // #B6AB91 - Default darker brown
+    		PowerCard.erowbg = "#cfbbae"; // #B6AB91 - Default darker brown !!!
 		PowerCard.orowtx = "#000000";
-		PowerCard.orowbg = "#CEC7B6"; // #CEC7B6 - Default light brown
-		PowerCard.corners = 5; // Set to 0 to remove rounded corners from PowerCards
-		PowerCard.border = "1px solid #000000"; // size style #color
+		PowerCard.orowbg = "#e5d5ca"; // #CEC7B6 - Default light brown !!!
+    		PowerCard.corners = 2; // Set to 0 to remove rounded corners from PowerCards !!! default ~5
+		PowerCard.border = "3px double #660000"; // size style #color !!! default "1px single #000000"
 		PowerCard.boxshadow = ""; // h-distance v-distance blur spread #color
-		PowerCard.lineheight = "1.1em";
+    		PowerCard.lineheight = "1.15em";
 		PowerCard.emotefont = "font-family: Georgia, serif; font-weight: bold; ";
 
 		// CREATE POWERCARD OBJECT
@@ -804,7 +804,7 @@ var PowerCards = PowerCards || (function() {
 			var Title = "" + "<div style='" + ShadowBoxStyle + "'>" + "<div style='" + TitleStyle + "' class='showtip tipsy' title='" + PowerCard.title + "'>" + PowerCard.name;
 			
 			// ADD SUBTITLES...
-			var Diamond = " &" + "#x2666; ";
+			var Diamond = " &" + "#x20; "; // to remove the default Diamond, which would be {var Diamond = " &" + "#x2666; ";}
 			var Subtitle = "<br><span style='" + SubTitleStyle + "'>";
 			Subtitle += (PowerCard.leftsub !== undefined) ? PowerCard.leftsub : "";
 			Subtitle += (PowerCard.leftsub !== undefined && PowerCard.rightsub !== undefined) ? Diamond : "";

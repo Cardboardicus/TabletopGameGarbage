@@ -2,11 +2,8 @@ var PowerCards = PowerCards || (function() {
 	//'use strict';
 	// VERSION INFO
 	var PowerCards_Author = "Sky and Kurt Jaegers";
-	var Bastard_Who_Tinkers_With_Aesthetics = "Cardboardicus";
 	var PowerCards_Version = "3.8.5";
 	var PowerCards_LastUpdated = "2018-08-10";
-	var PowerCards_LastTinkered = "2018-08-18";
-	var GoFindTheScripts_Here = "https://github.com/Roll20/roll20-api-scripts/tree/master/PowerCards";
 
 	// FUNCTION DECLARATIONS
 	var PowerCard = PowerCard || {};
@@ -97,20 +94,10 @@ var PowerCards = PowerCards || (function() {
 		var TargetCharacter_ID = ""
 
 		// DEFAULT FORMATTING
-		// These are my personal variable replacements.
-		//var Display = "";
-   		//var PlayerBGColor = "#662222";
-  		//var PlayerTXColor = "#ffe290";
- 		//var PlayerTXShadow = "#000000";
    		var Display = "";
-		var PlayerBGColor = (player_obj) ? player_obj.get("color") : "#FFFFFF";
-		var PlayerTXColor = (getBrightness(PlayerBGColor) < (255 / 2)) ? "#FFFFFF" : "#000000";
-		var PlayerTXShadow = (getBrightness(PlayerBGColor) < (255 / 2)) ? "#000000" : "#FFFFFF";
-		// These are the original variables. I'm using this as a reference to tinker with.
-		//var Display = "";
-		//var PlayerBGColor = (player_obj) ? player_obj.get("color") : "#FFFFFF";
-		//var PlayerTXColor = (getBrightness(PlayerBGColor) < (255 / 2)) ? "#FFFFFF" : "#000000";
-		//var PlayerTXShadow = (getBrightness(PlayerBGColor) < (255 / 2)) ? "#000000" : "#FFFFFF";
+   		var PlayerBGColor = "#662222"; // !!! default = (player_obj) ? player_obj.get("color") : "#FFFFFF";
+  		var PlayerTXColor = "#ffe290"; // !!! default = (getBrightness(PlayerBGColor) < (255 / 2)) ? "#FFFFFF" : "#000000";
+ 		var PlayerTXShadow = "#000000"; // !!! default = (getBrightness(PlayerBGColor) < (255 / 2)) ? "#000000" : "#FFFFFF";
     		PowerCard.titlefont = "Helvetica";
     		PowerCard.titlefontvariant = "small-caps";
     		PowerCard.titlefontshadow = "-1px -1px 0 " + PlayerTXShadow + ", 1px -1px 0 " + PlayerTXShadow + ", -1px 1px 0 " + PlayerTXShadow + ", 1px 1px 0 " + PlayerTXShadow + ";";
@@ -131,8 +118,7 @@ var PowerCards = PowerCards || (function() {
     		PowerCard.border = "3px double #660000"; // size style #color !!! default "1px single #000000"
     		PowerCard.boxshadow = ""; // h-distance v-distance blur spread #color
     		PowerCard.lineheight = "1.15em";
-		// I'm going to try to get the font in the emote utilize the color from PlayerBGColor to match my personal formatting wants.
-		PowerCard.emotefont = "font-family: "Helvetica"; font-weight: bold; font-style: italic; font-size: inherit; ";
+		PowerCard.emotefont = "font-family: Georgia, serif; font-weight: bold; ";
 
 		// CREATE POWERCARD OBJECT
 		n.shift();
@@ -348,7 +334,7 @@ var PowerCards = PowerCards || (function() {
 				Content += "<td>**Wis** "+ getSheetAttr(Character_ID, "wisdom") + "(" + (getSheetAttr(Character_ID, "wisdom_mod") || "0") + ")</td>";
 				Content += "<td>**Cha** "+ getSheetAttr(Character_ID, "charisma") + "(" + (getSheetAttr(Character_ID, "charisma_mod") || "0") + ")<br /></td></tr>";
 				Content += "<tr><td>**AC** " + getSheetAttr(Character_ID, "AC") + "</td>";
-				Content += outputIfNotEmpty("<td colspan=2>**Challenge Rating** ", getSheetAttr(Character_ID, "npc_challenge"), "<br /></td></tr></table>", "<td colspan=2>&nbsp; <br /></td></tr></table>"); 
+				Content += outputIfNotEmpty("<td colspan=2>**Challenge Rating** ", getSheetAttr(Character_ID, "npc_challenge"), "<br /></td></tr></table>", "<td colspan=2>  <br /></td></tr></table>"); 
 			}
 
 			if (Tag.includes("npc_qualities_summary") && (getObj("character", Content) !== undefined)) {
@@ -405,7 +391,8 @@ var PowerCards = PowerCards || (function() {
 						var action_content = getSheetAttr(Character_ID, "action_$" + action_count + "_macro");
 						if (action_content !== "") {
 							if (action_content !== "NONE") {
-								Content += "[" + npc_action + "](!&#13;" + action_content + ") ";
+								Content += "[" + npc_action + "](!
+" + action_content + ") ";
 							}
 						} else {
 								Content += "[" + npc_action + "](~" + Character_ID + "|repeating_attack_" + actionList[action_count] + "_attack) ";
@@ -432,7 +419,8 @@ var PowerCards = PowerCards || (function() {
 						var action_content = getSheetAttr(Character_ID, "action_$" + action_count + "_macro");
 						if (action_content !== "") {
 							if (action_content !== "NONE") {
-								Content += "[" + npc_action + "](!&#13;" + action_content + ") ";
+								Content += "[" + npc_action + "](!
+" + action_content + ") ";
 							}
 						} else {
 								Content += "[" + npc_action + "](~" + Character_ID + "|repeating_npcaction_" + actionList[action_count] + "_npc_action) ";
@@ -478,7 +466,8 @@ var PowerCards = PowerCards || (function() {
 						var action_content = getSheetAttr(Character_ID, "action-l_" + action_count + "_macro");
 						if (action_content !== "") {
 							if (action_content !== "NONE") {
-								Content += "[" + npc_action + "](!&#13;" + action_content + ") ";
+								Content += "[" + npc_action + "](!
+" + action_content + ") ";
 							}
 						} else {
 								Content += "[" + npc_action + "](~" + Character_ID + "|repeating_npcaction-l_$" + actionList[action_count] + "_npc_action) ";
@@ -1663,9 +1652,9 @@ var PowerCards = PowerCards || (function() {
 				handout.get("notes", function(notes) {
 					notes = notes.replace(/\<p\>/g,"").replace(/\<\/p\>/g,"<br>").split("<br>");
 					notes.forEach(function(notes) {
-						TemplateName = notes.substring(0, notes.indexOf(":")).replace(/&nbsp;/g,"").trim();
+						TemplateName = notes.substring(0, notes.indexOf(":")).replace(/ /g,"").trim();
 						TemplateContent = notes.substring(notes.indexOf(":") + 1).trim();
-						TemplateContent = TemplateContent.replace(/&gt;/g,">").replace(/&lt;/g,"<").replace(/&amp;/g,"&").replace(/&nbsp;/g," ").trim();
+						TemplateContent = TemplateContent.replace(/>/g,">").replace(/</g,"<").replace(/&/g,"&").replace(/ /g," ").trim();
 						if (TemplateName !== "" && TemplateContent !== "") PowerCard_Templates[TemplateName] = " " + TemplateContent;
 					});
 				});
@@ -1678,9 +1667,9 @@ var PowerCards = PowerCards || (function() {
 				handout.get("notes", function(notes) {
 					notes = notes.replace(/\<p\>/g,"").replace(/\<\/p\>/g,"<br>").split("<br>");
 					notes.forEach(function(notes) {
-						ReplacementName = notes.substring(0, notes.indexOf(":")).replace(/&nbsp;/g,"").trim();
+						ReplacementName = notes.substring(0, notes.indexOf(":")).replace(/ /g,"").trim();
 						ReplacementContent = notes.substring(notes.indexOf(":") + 1).trim();
-						ReplacementContent = ReplacementContent.replace(/&gt;/g,">").replace(/&lt;/g,"<").replace(/&amp;/g,"&").replace(/&nbsp;/g,"").trim();
+						ReplacementContent = ReplacementContent.replace(/>/g,">").replace(/</g,"<").replace(/&/g,"&").replace(/ /g,"").trim();
 						if (ReplacementName !== "" && ReplacementContent !== "") {
 							PowerCard_Replacements[ReplacementName] = " " + ReplacementContent;
 						}
@@ -1695,8 +1684,8 @@ var PowerCards = PowerCards || (function() {
 				handout.get("notes", function(notes) {
 					notes = notes.replace(/\<p\>/g,"").replace(/\<\/p\>/g,"<br>").split("<br>");
 					notes.forEach(function(notes) {
-						FormatName = notes.substring(0, notes.indexOf(":")).replace(/<(?:.|\n)*?>/g,"").replace(/&nbsp;/g,"").trim();
-						FormatContent = notes.substring(notes.indexOf(":") + 1).replace(/<(?:.|\n)*?>/g,"").replace(/&nbsp;/g,"").trim();
+						FormatName = notes.substring(0, notes.indexOf(":")).replace(/<(?:.|\n)*?>/g,"").replace(/ /g,"").trim();
+						FormatContent = notes.substring(notes.indexOf(":") + 1).replace(/<(?:.|\n)*?>/g,"").replace(/ /g,"").trim();
 						if (FormatName !== "" && FormatContent !== "") PowerCard_Formats[FormatName] = " " + FormatContent;
 					});
 				});
@@ -1987,7 +1976,8 @@ var PowerCards = PowerCards || (function() {
 	function getSpellMacro(charid, spellname, spellattrname) {
 		var spellAttr = getSheetAttr(charid, "spell_" + spellname.replace(/ /g,"_") + "_macro");
 		if (spellAttr !== "") {
-			return("(!&#13;" + spellAttr + ")");
+			return("(!
+" + spellAttr + ")");
 		} else {
 			return("(~selected|" + spellattrname.replace("name","")+")"); 
 		}
@@ -2039,3 +2029,5 @@ var PowerCards = PowerCards || (function() {
 	
 	return { Process: PowerCard.Process };
 }());
+
+// And that's all she wrote, folks!

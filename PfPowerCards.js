@@ -132,7 +132,7 @@ var PowerCards = PowerCards || (function() {
     		PowerCard.boxshadow = ""; // h-distance v-distance blur spread #color
     		PowerCard.lineheight = "1.15em";
 		// I'm going to try to get the font in the emote utilize the color from PlayerBGColor to match my personal formatting wants.
-		PowerCard.emotefont = "font-family: "Helvetica"; font-weight: bold; font-style: italic; font-size: inherit; color: var(--PlayerBGColor);"
+		PowerCard.emotefont = "font-family: "Helvetica"; font-weight: bold; font-style: italic; font-size: inherit; ";
 
 		// CREATE POWERCARD OBJECT
 		n.shift();

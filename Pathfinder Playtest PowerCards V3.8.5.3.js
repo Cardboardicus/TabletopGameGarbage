@@ -118,7 +118,7 @@ var PowerCards = PowerCards || (function() {
 		PowerCard.border = "3px double #660000"; // size style #color !!! default "1px single #000000"
 		PowerCard.boxshadow = ""; // h-distance v-distance blur spread #color
     		PowerCard.lineheight = "1.15em";
-		PowerCard.emotefont = "font-family: Georgia, serif; font-weight: bold; ";
+		PowerCard.emotefont = "font-family: Helvetica, sans; font-weight: bold; font-style: italic; font-size: inherit; color: #434343;";
 
 		// CREATE POWERCARD OBJECT
 		n.shift();

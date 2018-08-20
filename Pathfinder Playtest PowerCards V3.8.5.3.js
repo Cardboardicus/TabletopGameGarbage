@@ -3,7 +3,10 @@ var PowerCards = PowerCards || (function() {
 	// VERSION INFO
 	var PowerCards_Author = "Sky and Kurt Jaegers";
 	var PowerCards_Version = "3.8.5";
+	// Version Source:
 	var PowerCards_LastUpdated = "2018-08-10";
+	// Edits for the Pathfinder Playtest by Cardboardicus
+	// Last tinkered with 2018-08-19
 
 	// FUNCTION DECLARATIONS
 	var PowerCard = PowerCard || {};
